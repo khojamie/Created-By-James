@@ -1,0 +1,18 @@
+<html>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <button>Sort</button>
+    <div class="wrapper">
+      <div class="efe" data-worth="120"><h1>EDGDY</h1><h2>Pirate</h2> </div>
+      <div class="efe" data-worth="420">Blaze</div>
+      <div class="efe" data-worth="666">Meme</div>
+    </div>
+    <script>
+        $('button').click(function() {
+  $('.wrapper div').sort(function(a, b) {
+    return $(b).data('worth') - $(a).data('worth');
+  }).appendTo('.wrapper');
+});
+    </script>
+</body>
+</html>
