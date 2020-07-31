@@ -6803,3 +6803,90 @@ del {
 .switch-wrap {
     margin-bottom: 10px
 }
+
+.gallery-section {
+	padding: 0 40px 80px;
+}
+.gallery-item {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.gallery-item img {
+	min-width: 100%;
+}
+.gallery-item:after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 200px;
+	left: 0;
+	bottom: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	background: black;
+	background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 46%);
+	background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 46%);
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 46%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+	z-index: 1;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.gallery-item .gi-text {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	bottom: 50px;
+	padding: 0 15px;
+	z-index: 2;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.gallery-item .gi-text h4 {
+	color: #fff;
+	margin-bottom: 50px;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.gallery-item .gi-text p {
+	color: #fff;
+	text-transform: uppercase;
+}
+.gallery-item:hover:after {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.gallery-item:hover .gi-text {
+	bottom: 0;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.gallery-item:hover .gi-text h4 {
+	margin-bottom: 5px;
+}
+.fr-position-outside {
+	left: 0;
+	top: 0;
+	right: auto;
+	bottom: auto;
+}
+.fr-position-text {
+	color: #fff;
+}
+.fr-window-skin-fresco.fr-window-ui-outside .fr-close-background, .fr-window-skin-fresco.fr-window-ui-outside .fr-close:hover .fr-close-background {
+	background-color: transparent;
+}
+.fr-thumbnail-active {
+	border: 2px solid #242deb;
+}
